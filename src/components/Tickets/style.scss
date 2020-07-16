@@ -1,0 +1,115 @@
+@import "../../global/style";
+
+.ticket{
+  margin-top: 20px;
+  height: 160px;
+  background-color: $white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  .logoAndPrice{
+    border-right: 1px solid #eceff1;
+    padding: 20px;
+    width: 200px;
+    justify-content: space-between;
+    .logoCarrier{
+      text-align: center;
+      img{
+        max-width: 120px;
+        max-height: 35px;
+      }
+    }
+    .btnBuyTicket{
+      background: $btnOrange;
+      cursor: pointer;
+      width: 160px;
+      height: 55px;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 17px;
+      border: none;
+      border-radius: 5px;
+      &:focus{
+        outline-style: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  .ticketInfo{
+    padding: 20px;
+    justify-content: space-between;
+    .infoTime{
+      color: $infoTravel;
+      &:nth-of-type(2) {
+        text-align: right;
+      }
+      .mainTime{
+        font-size: 35px;
+        margin-bottom: 4px;
+      }
+      .cityInfo{
+        font-size: 13px;
+      }
+      .dateTime{
+        color: $infoLightGrey;
+        margin-top: 5px;
+      }
+    }
+
+    .transfer{
+      position: relative;
+      text-transform: uppercase;
+      color: #8b9497;
+      font-size: 11px;
+      width: 95px;
+      top: 5px;
+      &:after {
+        content: '';
+        background-image: url("plane.png");
+        position: absolute;
+        right: -5px;
+        width: 18px;
+        height: 18px;
+        top: 12px;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        width: 90px;
+        left: -10px;
+        height: 1px;
+        top: 23px;
+        background: $infoLightGrey;
+      }
+    }
+  }
+}
+
+.tabBtn{
+  width: 50%;
+  height: 50px;
+  background: $white;
+  text-transform: uppercase;
+  border: 1px solid #DFE5EC;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  &:focus, &:active{
+    outline-color: $btnOrange;
+    color: $white;
+  }
+  &:hover{
+    background: $btnOrange;
+    color: $white;
+    transition-duration: 0.5s;
+  }
+}
+.tabBtnDown{
+  border-radius: 5px 0 0 5px;
+}
+.tabBtnUp{
+  border-radius: 0 5px 5px 0;
+}
+.tabRatingActive{
+  background: $btnOrange;
+  color: $white;
+}
