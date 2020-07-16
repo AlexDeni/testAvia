@@ -25,11 +25,14 @@ function Filter ({tickets, filterTickets}){
         filterTickets(filteredTickets)
     }
 
-    const chooseOne = value => {
-        let chooseTicket = filters.find(item => item.value === value.target.value)
-        let abc = filters.map(item => item.active === false)
-        console.log('hello', chooseTicket)
-        console.log('allChoose', abc)
+    const chooseOne = (value) => {
+        let statusCheckBox = filters.map( item => (
+            item.value.includes(value.target.value) ? { ...item, active:true } : {...item, active:false})
+        )
+        let arrChooseId = statusCheckBox.filter(item => item.active).map(item => item.id)
+        let filteredTickets = stateTickets.filter(item => arrChooseId.includes(item.stops))
+        setFilter(statusCheckBox)
+        filterTickets(filteredTickets)
     }
 
     return(
