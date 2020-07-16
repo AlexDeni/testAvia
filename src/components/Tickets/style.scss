@@ -1,22 +1,21 @@
 @import "../../global/style";
 
+.mainContent{
+  margin: 0 10px;
+}
 .ticket{
   margin-top: 20px;
-  height: 160px;
-  background-color: $white;
+  min-height: 160px;
+  background: $white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   .logoAndPrice{
     border-right: 1px solid #eceff1;
     padding: 20px;
-    width: 200px;
     justify-content: space-between;
-    .logoCarrier{
-      text-align: center;
-      img{
-        max-width: 120px;
-        max-height: 35px;
-      }
+    img{
+      max-height: 40px;
+      margin: 0 auto;
     }
     .btnBuyTicket{
       background: $btnOrange;
@@ -64,7 +63,7 @@
       top: 5px;
       &:after {
         content: '';
-        background-image: url("plane.png");
+        background-image: url("../../static/plane.png");
         position: absolute;
         right: -5px;
         width: 18px;

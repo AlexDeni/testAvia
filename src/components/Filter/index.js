@@ -20,19 +20,20 @@ function Filter ({tickets, filterTickets}){
         let allChoose = statusCheckBox.filter(item => item.value !== 'Все').every(item => item.active);
         statusCheckBox.find(item => item.value === 'Все').active = allChoose;
         setFilter(statusCheckBox);
-        let arrChooseId = statusCheckBox.filter(item => item.active).map(item => item.id)
-        let filteredTickets = stateTickets.filter(item => arrChooseId.includes(item.stops))
-        filterTickets(filteredTickets)
+        filterTickets(finishFilter(statusCheckBox))
     }
 
     const chooseOne = (value) => {
         let statusCheckBox = filters.map( item => (
             item.value.includes(value.target.value) ? { ...item, active:true } : {...item, active:false})
         )
-        let arrChooseId = statusCheckBox.filter(item => item.active).map(item => item.id)
-        let filteredTickets = stateTickets.filter(item => arrChooseId.includes(item.stops))
         setFilter(statusCheckBox)
-        filterTickets(filteredTickets)
+        filterTickets(finishFilter(statusCheckBox))
+    }
+
+    const finishFilter = statusCheckBox => {
+        let arrChooseId = statusCheckBox.filter(item => item.active).map(item => item.id)
+        return stateTickets.filter(item => arrChooseId.includes(item.stops))
     }
 
     return(

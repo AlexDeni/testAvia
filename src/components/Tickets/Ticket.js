@@ -1,10 +1,6 @@
 import React from "react";
 import { CompanyEmblem } from './companyEmblem'
 
-const formatDate = date => {
-
-}
-
 const CountTransfer = transfer => {
     if(transfer.transfer === 0){
         return <span className="transfer" />
@@ -12,17 +8,16 @@ const CountTransfer = transfer => {
     return <p className="transfer">{transfer.transfer} Пересадки</p>
 }
 
-
 const Ticket = ({items}) => {
     return (
-        <div>
+        <>
             {items.map((item)=>{
                 return (
                     <div key={item.id} className='ticket layout'>
                         <div className='logoAndPrice layout layoutColumn'>
-                            <div className='logoCarrier'>
+
                                 <CompanyEmblem carrier={item.carrier} />
-                            </div>
+
                             <button className="btnBuyTicket">
                                 Купить за <br/>
                                 {item.price} грн
@@ -45,7 +40,7 @@ const Ticket = ({items}) => {
                     </div>
                 )
             })}
-        </div>
+        </>
     )
 }
 

@@ -1,16 +1,19 @@
 @import './components/Tickets/style';
 @import './components/Filter/style';
 
-header {
+.mainBlock{
+  flex-wrap: wrap;
+  header {
     margin: 50px;
+  }
 }
+
 
 .layout{
   display: flex;
   box-sizing: border-box;
   position: relative;
   flex-direction: row;
-  width: 100%;
   align-items: stretch;
 }
 

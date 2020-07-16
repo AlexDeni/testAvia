@@ -4,18 +4,17 @@ import s7 from './../../static/s7.png';
 import wizz from './../../static/wizz.jpg';
 import plane from './../../static/defaultPlane.png';
 
-
 const CompanyEmblem = carrier => {
-    if(carrier.carrier === 'WIZ'){
-        return <img src={wizz} alt="wizz"/>
+    switch (carrier.carrier) {
+        case 'WIZ':
+            return <img src={wizz} alt="wizz"/>
+        case 'RA':
+            return <img src={ryanAir} alt="ryanAir"/>
+        case 'S7':
+            return <img src={s7} alt="s7"/>
+        default:
+            return <img src={plane} alt="plane"/>
     }
-    if(carrier.carrier === 'RA'){
-        return <img src={ryanAir} alt="ryanAir"/>
-    }
-    if(carrier.carrier === 'S7'){
-        return <img src={s7} alt="s7"/>
-    }
-    return <img src={plane} alt="default"/>
 }
 
 export { CompanyEmblem }

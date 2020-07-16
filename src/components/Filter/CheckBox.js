@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Checkbox = ({ value, onChange, chooseOne, active }) => (
-    <div className='blockCheckbox'>
+    <div className='blockCheckbox layout'>
         <label>
             <input
                 type="checkbox"
@@ -12,7 +12,12 @@ const Checkbox = ({ value, onChange, chooseOne, active }) => (
             />
             <span className="psevdoCheckbox">{value}</span>
         </label>
-        <button value={value} onClick={chooseOne}>только</button>
+        {value !== 'Все' ?
+            <button
+                value={value}
+                onClick={chooseOne}>
+                только
+            </button> : ''}
     </div>
 )
 

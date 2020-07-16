@@ -5,7 +5,7 @@
   padding: 20px 0 10px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-right: 20px;
+  margin: 0 10px 30px 10px;
   min-width: 235px;
   .blockCheckbox{
     padding: 10px 20px;
@@ -29,16 +29,30 @@
 
 input[type=checkbox] { display: none; }
 
+.blockCheckbox{
+  justify-content: space-between;
+  button{
+    background-color: inherit;
+    border: none;
+    color: $mainBlue;
+    outline: none;
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
 
 .psevdoCheckbox{
   cursor: pointer;
+  font-size: 12px;
   &::before {
     content: "\00A0";
     display: inline-block;
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: $white;
     border: 1px solid #9ABBCE;
     border-radius: 2px;
     margin-right: 10px;
@@ -51,7 +65,8 @@ input[type=checkbox] { display: none; }
 
 input[type=checkbox]:checked + .psevdoCheckbox::before {
   content: "\2713";
-  color: $mainPrice;
-  border: 1px solid $mainPrice;
+  color: $mainBlue;
+  border: 1px solid $mainBlue;
+  background-color: #f2fcff;
 }
 
