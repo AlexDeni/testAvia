@@ -35,7 +35,7 @@ class Tickets extends Component {
         const {isLoaded, items} = this.state
         if(isLoaded){
             return(
-                <section className="mainBlock layoutCenter layout">
+                <section className="container mainBlock layoutCenter layout">
                     <div className='leftSideBar'>
                         <Filter tickets={items} filterTickets={this.setTickets} />
                     </div>

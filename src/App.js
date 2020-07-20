@@ -6,7 +6,7 @@ import { Tickets } from './components/Tickets'
 function App() {
   return (
     <div className="App">
-        <header className='layout layoutCenter'>
+        <header className='container layout layoutCenter'>
           <img src={logo} alt="logo" className="logo"/>
         </header>
         <Tickets  />

@@ -2,6 +2,7 @@
 
 .mainContent{
   margin: 0 10px;
+  min-width: 565px;
 }
 .ticket{
   margin-top: 20px;
@@ -9,10 +10,14 @@
   background: $white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  &:last-child{
+    margin-bottom: 20px;
+  }
   .logoAndPrice{
     border-right: 1px solid #eceff1;
     padding: 20px;
     justify-content: space-between;
+    max-width: 200px;
     img{
       max-height: 40px;
       margin: 0 auto;
@@ -20,7 +25,6 @@
     .btnBuyTicket{
       background: $btnOrange;
       cursor: pointer;
-      width: 160px;
       height: 55px;
       color: $white;
       text-transform: uppercase;
@@ -42,7 +46,7 @@
         text-align: right;
       }
       .mainTime{
-        font-size: 35px;
+        font-size: 32px;
         margin-bottom: 4px;
       }
       .cityInfo{
@@ -68,7 +72,7 @@
         right: -5px;
         width: 18px;
         height: 18px;
-        top: 12px;
+        top: 10px;
       }
       &:before{
         content: '';
@@ -76,7 +80,7 @@
         width: 90px;
         left: -10px;
         height: 1px;
-        top: 23px;
+        top: 21px;
         background: $infoLightGrey;
       }
     }
@@ -111,4 +115,29 @@
 .tabRatingActive{
   background: $btnOrange;
   color: $white;
+}
+
+
+/*media*/
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 800px;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .mainContent{
+    margin: 0 10px;
+    min-width: 405px;
+  }
+  .logoAndPrice{
+    max-width: 140px;
+    padding: 10px;
+    .btnBuyTicket{
+      font-size: 12px;
+    }
+  }
+  .mainTime{
+    font-size: 14px;
+  }
 }

@@ -20,7 +20,7 @@ const Tabs = ({tickets, setTickets}) => {
     }
 
     return(
-        <>
+        <div className='layout tabFilter'>
             <button className={classNames('tabBtn tabBtnDown', { 'tabRatingActive': ratingDown })}
                     onClick={numberTransfersDown}>
                     Самый быстрый
@@ -29,7 +29,7 @@ const Tabs = ({tickets, setTickets}) => {
                     onClick={ratingPriceDown}>
                     Самый дешевый
             </button>
-        </>
+        </div>
     )
 }
 
