@@ -19,6 +19,9 @@
   @include mediaMin {
     min-height: 120px;
   }
+  @include mediaExtraMin{
+    flex-direction: column-reverse;
+  }
   .logoAndPrice{
     border-right: 1px solid #eceff1;
     padding: 20px;
@@ -28,9 +31,16 @@
       padding: 10px;
       max-width: 160px;
     }
+    @include mediaExtraMin{
+      max-width: 100%;
+      border: none;
+    }
     img{
       max-height: 40px;
       margin: 0 auto;
+      @include mediaExtraMin{
+        margin-bottom: 10px;
+      }
     }
     .btnBuyTicket{
       @include font-sans(17px, $white, false, false);
@@ -70,7 +80,7 @@
       .cityInfo{
         font-size: 12px;
         @include mediaMin {
-          font-size: 10px;
+          font-size: 11px;
         }
       }
       .dateTime{

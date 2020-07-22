@@ -1,5 +1,4 @@
-@import './components/Tickets/style';
-@import './components/Filter/style';
+
 
 .layout{
   display: flex;
@@ -21,7 +20,8 @@
 .container{
   flex-wrap: wrap;
 }
-
+@import './components/Tickets/style';
+@import './components/Filter/style';
 header {
   margin: 50px 0;
   @include mediaMin {
@@ -31,5 +31,4 @@ header {
     width: 60px;
   }
 }
-
 

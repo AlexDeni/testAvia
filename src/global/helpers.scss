@@ -34,3 +34,9 @@ $infoLightGrey: #d2d5d6;
     @content;
   }
 }
+
+@mixin mediaExtraMin {
+  @media (max-width: 480px){
+    @content;
+  }
+}
