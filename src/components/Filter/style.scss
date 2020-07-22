@@ -1,4 +1,4 @@
-@import "../../global/style";
+@import "../../global/helpers";
 
 .filter{
   background-color: $white;
@@ -34,9 +34,8 @@ input[type=checkbox] { display: none; }
   button{
     background-color: inherit;
     border: none;
-    color: $mainBlue;
     outline: none;
-    font-size: 14px;
+    @include font-sans(14px, $mainBlue);
     &:hover{
       text-decoration: underline;
       cursor: pointer;
@@ -48,8 +47,7 @@ input[type=checkbox] { display: none; }
   cursor: pointer;
   font-size: 12px;
   &::before {
-    content: "\00A0";
-    display: inline-block;
+    @include pseudoElement(inline-block, relative, '\00A0' );
     box-sizing: border-box;
     width: 20px;
     height: 20px;
@@ -60,7 +58,6 @@ input[type=checkbox] { display: none; }
     text-align: center;
     line-height: 18px;
     font-weight: bold;
-    color: #808080;
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Checkbox} from './CheckBox'
+import {Currency} from "./Currency";
 
 const filterItem = ['1 Пересадка', '2 Пересадки', '3 Пересадки'];
 

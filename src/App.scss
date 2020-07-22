@@ -1,17 +1,6 @@
 @import './components/Tickets/style';
 @import './components/Filter/style';
 
-.mainBlock{
-  flex-wrap: wrap;
-  header {
-    margin: 50px;
-  }
-}
-
-.container{
-  width: 820px;
-}
-
 .layout{
   display: flex;
   width: 100%;
@@ -28,3 +17,19 @@
 .layoutCenter{
   justify-content: center;
 }
+
+.container{
+  flex-wrap: wrap;
+}
+
+header {
+  margin: 50px 0;
+  @include mediaMin {
+    margin: 10px 0;
+  }
+  img{
+    width: 60px;
+  }
+}
+
+

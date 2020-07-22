@@ -8,7 +8,6 @@ const Checkbox = ({ value, onChange, chooseOne, active }) => (
                 data-value={value}
                 checked={active}
                 onChange={onChange}
-                className='filterCheckbox'
             />
             <span className="psevdoCheckbox">{value}</span>
         </label>

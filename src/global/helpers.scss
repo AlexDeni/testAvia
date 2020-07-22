@@ -1,0 +1,36 @@
+
+$backGround: #F3F7FA;
+$mainBlue: #2196F3;
+$secondaryTitle: #A0B0B9;
+$infoTravel: #4A4A4A;
+$white: #ffffff;
+$btnOrange: #ff6d00;
+$infoLightGrey: #d2d5d6;
+
+@mixin pseudoElement($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin font-sans($size: false, $color: false, $weight: false, $lh: false) {
+  font-family: 'Open Sans', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin mediaMin {
+  @media (max-width: 640px){
+    @content;
+  }
+}

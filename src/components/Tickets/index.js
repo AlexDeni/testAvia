@@ -35,7 +35,7 @@ class Tickets extends Component {
         const {isLoaded, items} = this.state
         if(isLoaded){
             return(
-                <section className="container mainBlock layoutCenter layout">
+                <section className="container layoutCenter layout">
                     <div className='leftSideBar'>
                         <Filter tickets={items} filterTickets={this.setTickets} />
                     </div>
@@ -48,7 +48,9 @@ class Tickets extends Component {
         }
         else{
             return(
-                <p>dont</p>
+                <section className="layoutCenter layout">
+                    Извините произошла ошибка
+                </section>
             )
         }
     }

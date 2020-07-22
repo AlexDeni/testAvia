@@ -1,8 +1,11 @@
-@import "../../global/style";
+@import "../../global/helpers";
 
 .mainContent{
   margin: 0 10px;
   min-width: 565px;
+  @include mediaMin {
+    min-width: 95%;
+  }
 }
 .ticket{
   margin-top: 20px;
@@ -13,33 +16,45 @@
   &:last-child{
     margin-bottom: 20px;
   }
+  @include mediaMin {
+    min-height: 120px;
+  }
   .logoAndPrice{
     border-right: 1px solid #eceff1;
     padding: 20px;
     justify-content: space-between;
     max-width: 200px;
+    @include mediaMin {
+      padding: 10px;
+      max-width: 160px;
+    }
     img{
       max-height: 40px;
       margin: 0 auto;
     }
     .btnBuyTicket{
+      @include font-sans(17px, $white, false, false);
       background: $btnOrange;
       cursor: pointer;
-      height: 55px;
-      color: $white;
       text-transform: uppercase;
-      font-size: 17px;
       border: none;
       border-radius: 5px;
+      padding: 8px;
       &:focus{
         outline-style: none;
-        border-radius: 5px;
+      }
+      @include mediaMin {
+        font-size: 13px;
+        padding: 5px;
       }
     }
   }
   .ticketInfo{
     padding: 20px;
     justify-content: space-between;
+    @include mediaMin {
+      padding: 10px;
+    }
     .infoTime{
       color: $infoTravel;
       &:nth-of-type(2) {
@@ -48,9 +63,15 @@
       .mainTime{
         font-size: 32px;
         margin-bottom: 4px;
+        @include mediaMin {
+          font-size: 22px;
+        }
       }
       .cityInfo{
-        font-size: 13px;
+        font-size: 12px;
+        @include mediaMin {
+          font-size: 10px;
+        }
       }
       .dateTime{
         color: $infoLightGrey;
@@ -65,23 +86,30 @@
       font-size: 11px;
       width: 95px;
       top: 5px;
+      @include mediaMin {
+        font-size: 9px;
+        top: 0;
+        width: 75px;
+      }
       &:after {
-        content: '';
+        @include pseudoElement;
         background-image: url("../../static/plane.png");
-        position: absolute;
         right: -5px;
         width: 18px;
         height: 18px;
         top: 10px;
       }
       &:before{
-        content: '';
-        position: absolute;
+        @include pseudoElement;
         width: 90px;
         left: -10px;
         height: 1px;
         top: 21px;
         background: $infoLightGrey;
+        @include mediaMin {
+          font-size: 9px;
+          width: 80px;
+        }
       }
     }
   }
@@ -93,51 +121,29 @@
   background: $white;
   text-transform: uppercase;
   border: 1px solid #DFE5EC;
-  font-weight: 600;
-  font-size: 12px;
+  @include font-sans(12px, false, 600);
   cursor: pointer;
   &:focus, &:active{
-    outline-color: $btnOrange;
+    outline: none;
     color: $white;
   }
   &:hover{
     background: $btnOrange;
     color: $white;
     transition-duration: 0.5s;
+    outline: none;
   }
 }
 .tabBtnDown{
   border-radius: 5px 0 0 5px;
+  border-right: 0.5px solid #DFE5EC;
 }
 .tabBtnUp{
   border-radius: 0 5px 5px 0;
+  border-left: 0.5px solid #DFE5EC;
 }
 .tabRatingActive{
   background: $btnOrange;
   color: $white;
-}
-
-
-/*media*/
-
-@media screen and (max-width: 1000px) {
-  .container {
-    width: 800px;
-    max-width: 95%;
-    margin: 0 auto;
-  }
-  .mainContent{
-    margin: 0 10px;
-    min-width: 405px;
-  }
-  .logoAndPrice{
-    max-width: 140px;
-    padding: 10px;
-    .btnBuyTicket{
-      font-size: 12px;
-    }
-  }
-  .mainTime{
-    font-size: 14px;
-  }
+  border-color: $btnOrange;
 }

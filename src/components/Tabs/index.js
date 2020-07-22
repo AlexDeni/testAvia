@@ -8,14 +8,18 @@ const Tabs = ({tickets, setTickets}) => {
     const numberTransfersDown = () => {
         let resultDown = tickets.sort((prev, next) =>  prev.stops - next.stops);
         setTickets(resultDown)
-        setRatingDown(!ratingDown)
+        if(!ratingDown){
+            setRatingDown(!ratingDown)
+        }
         setRatingUp(false)
     }
 
     const ratingPriceDown = () => {
         let resultUp = tickets.sort((prev, next) => prev.price - next.price);
         setTickets(resultUp)
-        setRatingUp(!ratingUp)
+        if(!ratingUp){
+            setRatingUp(!ratingUp)
+        }
         setRatingDown(false)
     }
 
