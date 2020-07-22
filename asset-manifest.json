@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/testAvia/static/css/main.30ac803f.chunk.css",
+    "main.css": "/testAvia/static/css/main.9a69e5d0.chunk.css",
     "main.js": "/testAvia/static/js/main.28462fb2.chunk.js",
     "main.js.map": "/testAvia/static/js/main.28462fb2.chunk.js.map",
     "runtime-main.js": "/testAvia/static/js/runtime-main.afa3647e.js",
@@ -8,9 +8,9 @@
     "static/js/2.e0ed7a90.chunk.js": "/testAvia/static/js/2.e0ed7a90.chunk.js",
     "static/js/2.e0ed7a90.chunk.js.map": "/testAvia/static/js/2.e0ed7a90.chunk.js.map",
     "index.html": "/testAvia/index.html",
-    "precache-manifest.37ebdb8ab98d7ef54f239bb1b937e910.js": "/testAvia/precache-manifest.37ebdb8ab98d7ef54f239bb1b937e910.js",
+    "precache-manifest.042cecedbf4c1394441e3dcb59b51a71.js": "/testAvia/precache-manifest.042cecedbf4c1394441e3dcb59b51a71.js",
     "service-worker.js": "/testAvia/service-worker.js",
-    "static/css/main.30ac803f.chunk.css.map": "/testAvia/static/css/main.30ac803f.chunk.css.map",
+    "static/css/main.9a69e5d0.chunk.css.map": "/testAvia/static/css/main.9a69e5d0.chunk.css.map",
     "static/js/2.e0ed7a90.chunk.js.LICENSE.txt": "/testAvia/static/js/2.e0ed7a90.chunk.js.LICENSE.txt",
     "static/media/defaultPlane.png": "/testAvia/static/media/defaultPlane.843f481c.png",
     "static/media/index.css": "/testAvia/static/media/monzerat.5906fb82.ttf"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.afa3647e.js",
     "static/js/2.e0ed7a90.chunk.js",
-    "static/css/main.30ac803f.chunk.css",
+    "static/css/main.9a69e5d0.chunk.css",
     "static/js/main.28462fb2.chunk.js"
   ]
 }
